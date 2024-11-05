@@ -25,9 +25,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/universal9611-common/universal9611-common-vendor.mk)
 
-# Debug utils
-$(call inherit-product, hardware/samsung-ext/interfaces/debug-tools/debug.mk)
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl:32 \
@@ -184,10 +181,6 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.samsung
-
-# Livedisplay
-#PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.samsung-exynos
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -359,16 +352,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 endif
 
-# Samsung Ext Flash
-PRODUCT_PACKAGES += \
-     vendor.samsung_ext.hardware.camera.flashlight-service \
-     FlashControl
-
-# Samsung Ext SmartCharge
-PRODUCT_PACKAGES += \
-     vendor.samsung_ext.framework.battery-service \
-     SmartCharge
-
 # Shims
 PRODUCT_PACKAGES += \
     libshim_sensorndkbridge \
@@ -391,8 +374,7 @@ PRODUCT_COPY_FILES += \
 
 # Touch HAL
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.samsung \
-    vendor.lineage.touch@1.0-service.ss
+    vendor.lineage.touch@1.0-service.samsung 
 
 # USB
 PRODUCT_PACKAGES += \
