@@ -331,9 +331,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libshim_sensorndkbridge \
-    libhidltransport_vendor \
-    libhwbinder_vendor
+    libshim_sensorndkbridge
 
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
