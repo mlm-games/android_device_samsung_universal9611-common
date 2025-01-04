@@ -323,7 +323,8 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libnetutils.vendor:64 \
-    libsqlite.vendor:64
+    libsqlite.vendor:64 \
+    libstagefright_softomx_plugin.vendor
 
 # Sensors
 PRODUCT_PACKAGES += \
